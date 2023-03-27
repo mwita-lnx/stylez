@@ -22,10 +22,13 @@ deliveries.
 6. Integration of Tanda Africa's payments API for secure and efficient payment
 transactions.
 7. A performance tracking system for vendors and customer satisfaction monitoring.
-TechStack:
+#TechStack:
+**Server:**
 Python - Backend Development Django - Web Framework
 PostgreSQL - Database Management
+**Client:**
 HTML, CSS, JavaScript(React) - Frontend Development
+**payments:**
 Tanda Africa's Payments API - Payment Transactions
 Reasoning:
 Python is a popular language for web development and is known for its scalability, flexibility, and
@@ -37,7 +40,8 @@ and visually appealing user interface. Tanda Africa's Payments API is a secure a
 payment system that can handle transactions seamlessly. By combining these technologies, we
 can create a robust and efficient platform that meets the project objectives and user
 requirements.
-The check points for development
+
+#The check points for development
 Onboarding
 a. Signup screen
 b. Login screen
