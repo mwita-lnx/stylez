@@ -1,5 +1,6 @@
-ProjectTitle:Stylez MVP Development
-ProjectObjectives:
+# ProjectTitle:
+## Stylez MVP Development
+### ProjectObjectives:
 1. Develop a minimum viable product (MVP) that offers a vendor-based fashion platform
 connecting customers with local vendors.
 2. Build a user-friendly interface for both customers and vendors to use the platform
@@ -22,15 +23,16 @@ deliveries.
 6. Integration of Tanda Africa's payments API for secure and efficient payment
 transactions.
 7. A performance tracking system for vendors and customer satisfaction monitoring.
-#TechStack:
-**Server:**
+#TechStack:<br>
+**Server:** <br>
 Python - Backend Development Django - Web Framework
 PostgreSQL - Database Management
-**Client:**
+**Client:** <br>
 HTML, CSS, JavaScript(React) - Frontend Development
-**payments:**
+**payments:** <br>
 Tanda Africa's Payments API - Payment Transactions
-Reasoning:
+
+### Reasoning:
 Python is a popular language for web development and is known for its scalability, flexibility, and
 efficiency. Django is a widely used web framework for Python that provides a high-level
 abstraction of the database, making it easier to work with. PostgreSQL is a robust, open-source
@@ -41,40 +43,40 @@ payment system that can handle transactions seamlessly. By combining these techn
 can create a robust and efficient platform that meets the project objectives and user
 requirements.
 
-#The check points for development
-Onboarding
-a. Signup screen
-b. Login screen
-c. Vendor registration screen
-d. Verification process for vendors
-Vendor Dashboard
-a. Inventory management system
-b. Product listing and editing system
-c. Order management system
-d. Payment management system
-Customer Dashboard
-a. Signup and login screens
-b. Personal profile management
-c. Search and browse products
-d. Product details screen
-e. Shopping cart and checkout process
-Payment Integration
-a. Integration with Tanda Africa's payments API
-b. Testing and validation of payment processing
-c. Secure storage of payment information
-User Experience
-a. Mobile-friendly design
-b. Responsive design for different screen sizes
-c. Intuitive navigation and user interface
-d. Fast load times and smooth user interactions
-Security and Privacy
-a. Secure login and registration processes
-b. Encryption of sensitive data
-c. Protection against common web vulnerabilities
-d. Privacy policy and terms of use for users and vendors
+## The check points for development
+### Onboarding
+- Signup screen
+- Login screen
+- Vendor registration screen
+- Verification process for vendors
+### Vendor Dashboard
+- Inventory management system
+- Product listing and editing system
+- Order management system
+- Payment management system
+### Customer Dashboard
+- Signup and login screens
+- Personal profile management
+- Search and browse products
+- Product details screen
+- Shopping cart and checkout process
+### Payment Integration
+- Integration with Tanda Africa's payments API
+- Testing and validation of payment processing
+- Secure storage of payment information
+### User Experience
+- Mobile-friendly design
+- Responsive design for different screen sizes
+- Intuitive navigation and user interface
+- Fast load times and smooth user interactions
+### Security and Privacy
+- Secure login and registration processes
+- Encryption of sensitive data
+- Protection against common web vulnerabilities
+- Privacy policy and terms of use for users and vendors
 Testing and Quality Assurance
-a. Comprehensive testing of all features and functions
-b. Bug tracking and resolution system
+- Comprehensive testing of all features and functions
+- Bug tracking and resolution system
 
 
 
@@ -83,7 +85,7 @@ b. Bug tracking and resolution system
 
 
 
-For the MVP, the database should be able to store the following:
+# For the MVP, the database should be able to store the following:
 
 Vendor Information: Name, location, description, contact details, 
 product categories, commission rate, and other relevant details.
