@@ -4,14 +4,10 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
-
+from .models import Vendor,Customer
 User = get_user_model()
 
-#Serializer to Get User Details using Django Token Authentication
-class UserSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = User
-    fields = ["id", "email", "name","is_staff"]
+
 
 #Serializer to Register User
 class RegisterSerializer(serializers.ModelSerializer):
@@ -59,3 +55,29 @@ class UpdatePasswordSerializer(serializers.Serializer):
         instance.set_password(validated_data["new_password"])
         instance.save()
         return instance
+    
+
+
+class VendorSerializer(serializers.ModelSerializer):
+  user= serializers.PrimaryKeyRelatedField(source='user.id',read_only=True)
+  profile_pic = serializers.ImageField(required=False)
+  class Meta:
+    model = Vendor
+    fields = ['user', 'location', 'description', 'contact_no', 'product_categories','comission_rate','profile_pic']
+
+
+class CustomerSerializer(serializers.ModelSerializer):
+  user= serializers.PrimaryKeyRelatedField(source='user.id',read_only=True)
+  class Meta:
+    model = Customer
+    fields = "__all__"
+
+#Serializer to Get User Details using Django Token Authentication
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+
+  customer = CustomerSerializer(many=False, read_only=True)
+  vendor = VendorSerializer(many=False, read_only=True)
+  
+  class Meta:
+    model = User
+    fields = ["id", "email", "name","customer","vendor"]

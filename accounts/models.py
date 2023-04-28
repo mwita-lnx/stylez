@@ -25,18 +25,21 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.email
     
 class Vendor(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True,related_name='vendor')
     location = models.CharField(max_length=50)
     description = models.TextField()
     contact_no = models.CharField(max_length=25)
     product_categories = models.CharField(max_length=50)
     comission_rate = models.IntegerField()
+    profile_pic = models.ImageField(upload_to='accounts',null=True)
+
+    
 
     
 
 class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True,related_name='customer')
+    contact_no = models.CharField(max_length=25,null=True)
 
 
     
