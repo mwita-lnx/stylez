@@ -73,8 +73,7 @@ requirements.
 - Secure login and registration processes
 - Encryption of sensitive data
 - Protection against common web vulnerabilities
-- Privacy policy and terms of use for users and vendors
-Testing and Quality Assurance
+git fetchTesting and Quality Assurance
 - Comprehensive testing of all features and functions
 - Bug tracking and resolution system
 
