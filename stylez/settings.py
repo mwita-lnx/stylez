@@ -20,8 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = '339485f3455d1887b172fc5af90ecbdfae54fc82aa962716c113621e1e512a8a'
 
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 #for the custom user model
 AUTH_USER_MODEL = "accounts.User"
@@ -31,7 +33,7 @@ AUTH_USER_MODEL = "accounts.User"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -92,9 +94,18 @@ DATABASES = {
         'USER': 'stylez',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-        'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DBNAME'),
+#         'HOST': os.environ.get('DBHOST'),
+#         'USER': os.environ.get('DBUSER'),
+#         'PASSWORD': os.environ.get('DBPASS'),
+#     }
+# }
 
 
 
