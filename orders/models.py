@@ -1,12 +1,12 @@
 from django.db import models
-from ..accounts.models import Customer,Vendor
+from accounts.models import Customer,Vendor
 from django.utils import timezone
 
 # Create your models here.
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True,blank=True)
-    vendor = models.OneToOneField(Vendor, on_delete=models.CASCADE, primary_key=True,related_name='ven')
+    vendor = models.OneToOneField(Vendor, on_delete=models.CASCADE, primary_key=True)
     comission_rate = models.IntegerField()
     total = models.FloatField()
     transaction_id = models.CharField(max_length=100)
