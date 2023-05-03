@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'stylez.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'stylez',
+        'NAME': 'stylezz-database',
         'USER': 'stylez',
         'PASSWORD': 'password',
         'HOST': 'localhost',
