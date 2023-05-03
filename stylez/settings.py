@@ -92,7 +92,7 @@ DATABASES = {
         'USER': 'stylez',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
