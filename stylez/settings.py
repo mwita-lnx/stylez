@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'accounts',
     'stylez',
     'orders',
@@ -61,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'stylez.urls'
@@ -130,8 +132,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173/',
+    'http://localhost:5173',
 ]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
