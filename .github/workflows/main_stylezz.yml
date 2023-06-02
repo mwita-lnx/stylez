@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'stylezz'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ADA66A3A51E647798F34D65B12885330 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E741D3CD37894C37920C645E6C60E368 }}
