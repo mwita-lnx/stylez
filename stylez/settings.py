@@ -86,16 +86,12 @@ WSGI_APPLICATION = 'stylez.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'stylezz-database',
-        'USER': 'stylez',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
 
 # DATABASES = {
 #     'default': {
@@ -133,7 +129,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173/',
+]
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
