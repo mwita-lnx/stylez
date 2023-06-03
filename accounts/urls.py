@@ -32,6 +32,7 @@ customer_detail = CustomerDetails.as_view({
 urlpatterns = [
   path("api/get-details",UserDetailAPI.as_view()),
   path('api/register',RegisterUserAPIView.as_view()),
+  path('api/activate-account',AccountActivation.as_view()),
   path('api/update-user',UpdateUser.as_view()),
   path('api/update-password',UpdatePasswordView.as_view()),
   path('api/vendor/',vendor_list,),
@@ -39,4 +40,4 @@ urlpatterns = [
   path('api/customer/',customer_list,),
   path('api/customer-details/<int:pk>/', customer_detail, name='customer-detail'),
   path('api/',include(router.urls))
-] 
+]
