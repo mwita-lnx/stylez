@@ -136,8 +136,16 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
+
+# Internationalization..
+# https://docs.djangoproject.com/en/4.1/topics/i18n
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'semasasa840@gmail.com'
+EMAIL_HOST_PASSWORD = 'hmboujhgmwhdrevo'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 LANGUAGE_CODE = 'en-us'
 
