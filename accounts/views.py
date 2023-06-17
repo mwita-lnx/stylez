@@ -47,7 +47,7 @@ class AccountActivation(APIView):
         except(TypeError, ValueError, OverflowError, User.DoesNotExist,AttributeError):
             user = None
         if user is None:
-                return Response({'status':'400','message':'User not found'}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({'status':'400','message':'Invalid Email'}, status=status.HTTP_400_BAD_REQUEST)
         elif not user.is_active :
             if serializer.data['mode'] == "GET_TOKEN":
                 try:
@@ -65,7 +65,7 @@ class AccountActivation(APIView):
 
             elif serializer.data['mode'] == "VERIFY_TOKEN":
                 if  user.verification_code != serializer.data['token']:
-                    return Response({'status':'400','message':'Code expired/Incorrect Code : Kindly Resend '},status=status.HTTP_400_BAD_REQUEST)
+                    return Response({'status':'400','message':'verification Failed : Kindly Resend '},status=status.HTTP_400_BAD_REQUEST)
                 elif user.verification_code == serializer.data['token']:
                     user.is_active = True
                     user.verification_code = ''

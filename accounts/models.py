@@ -27,12 +27,14 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 class Vendor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True,related_name='vendor')
+    store_name = models.CharField(max_length=100)
     location = models.CharField(max_length=50)
     description = models.TextField()
     contact_no = models.CharField(max_length=25)
     product_categories = models.CharField(max_length=50)
     comission_rate = models.IntegerField()
     profile_pic = models.ImageField(upload_to='accounts',null=True)
+    type = models.IntegerField(choices=((1, _("individual")),(2, _("Business"))))
 
 
 
